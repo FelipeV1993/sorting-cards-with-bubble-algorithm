@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Playing Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <div class="margen">
+        <label for="numeroCarta">numero de cartas</label>
+        <input type="number" id="numeroDeCartas" name="numeroCarta"
+        min="1">
+        <button class="repartir" id="repartir">repartir</button>
+        <button id="ordenar">ordenar</button>
+        <div class="cards-container" id="contenedor">
+          hol
+          <!-- Generate n of cards by input.value -->
+          <!-- <div class="card">
+              <span class="suit suit--top">${card.suit}</span>
+              <span class="number">${card.num}</span>
+              <span class="suit suit--bottom color--red">${card.suit}</span>
+          </div> -->
+        </div>
+      </div>
+        
+      <div class="sort-container margen">
+          <p class="log__header">Select sort log:<div class="cards-sorted-container" id="contenedorSorteado">
+            <!-- Carts sorted -->
+        </div></p>
+          
+      </div>
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

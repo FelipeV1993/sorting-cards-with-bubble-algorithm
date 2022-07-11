@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+
+.margen {
+  margin-top: 30px;
+}
+
+body {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  background-color: green;
+}
+.cards-container-row {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-container-sort-row {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.sort-container {
+  margin-top: 2rem;
+}
+
+.container-iteration-num {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.iteration-num {
+  font-size: 50px;
+  color: white;
+  
+}
+
+.carta {
+  background-color: white;
+  border: 2px solid black;
+
+  position: relative;
+  width: 100px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.espada {
+  color: black;
+}
+.trebol {
+  color: black;
+}
+.corazon {
+  color: red;
+}
+.diamante {
+  color: red;
+}
+
+.carta-numero-pinta {
+  display: inline-block;
+  position: absolute;
+}
+
+.carta-numero-pinta.top {
+  font-size: 20px;
+  top: 5px;
+  left: 5px;
+}
+.carta-numero-pinta.bot {
+  font-size: 20px;
+  transform: rotate(180deg);
+  bottom: 5px;
+  right: 5px;
+}
+.carta-pinta {
+  font-size: 50px;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 100%;
+}
