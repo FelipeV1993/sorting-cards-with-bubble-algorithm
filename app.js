@@ -129,27 +129,7 @@ function cambiar() {
   const contenedor = document.querySelector("#contenedor");
   contenedor.innerHTML = "hola2";
 }
-// const agregarCarta = (cartasArray, sort, orden) => {
-//   let cardsContainer = document.querySelector('.cards-container');
-//   let cardsContainerSorted = document.querySelector('.cards-sorted-container');
-//   let cardsDOM = '';
 
-//   for (let i = 0; i < cartasArray.length; i++) {
-//     cardsDOM += crearCartas(cartasArray[i]);
-//   }
-//   // If sort is set to false, only displays the cards
-//   if (!sort) {
-//     cardsContainer.innerHTML = '<div class="cards-container-row">' + cardsDOM + '</div>';
-//   } else {
-//     // If sort is set to true, sort them
-//     cardsContainerSorted.innerHTML +=
-//       '<div class="cards-container-sort-row"> <div class="container-iteration-num"> <p class="iteration-num">' +
-//       orden +
-//       '</p> </div> ' +
-//       cardsDOM +
-//       ' </div>';
-//   }
-// };
 
 const bubbleSort = (cartasArray) => {
   let newCardsArr = [...cartasArray];
@@ -161,8 +141,11 @@ const bubbleSort = (cartasArray) => {
       //compare the adjacent positions, if the right one is bigger, we have to swap
       if (newCardsArr[index].numero > newCardsArr[index + 1].numero) {
         let aux = newCardsArr[index].numero;
+        let aux2= newCardsArr[index].pinta
         newCardsArr[index].numero = newCardsArr[index + 1].numero;
+        newCardsArr[index].pinta = newCardsArr[index + 1].pinta;
         newCardsArr[index + 1].numero = aux;
+        newCardsArr[index + 1].pinta = aux2;
         filaNumero++
         crearCartas(newCardsArr, sort,filaNumero);
       }
@@ -173,34 +156,7 @@ const bubbleSort = (cartasArray) => {
   return cartasArray;
 };
 
-// const bubbleSort = (cartasArray) => {
-//   let cartasArrayCopy = [...cartasArray];
-//   let interaccion = -1;
 
-//   for (let i = 0; i < cartasArrayCopy.length; i++) {
-//     for (let j = 0; j < cartasArrayCopy.length - i - 1; j++) {
-//       if (values.indexOf(cartasArrayCopy[j].numero) > values.indexOf(cartasArrayCopy[j + 1].numero)) {
-//         const cambio = cartasArrayCopy[j + 1];
-//         cartasArrayCopy[j + 1] = cartasArrayCopy[j];
-//         cartasArrayCopy[j] = cambio;
-//         interaccion++;
-//         // agregarCarta(cartasArrayCopy, true, interaccion);
-//       }
-//     }
-//   }
-
-//   if (interaccion == -1) {
-//     agregarCarta(cartasArrayCopy, true, 0);
-//   }
-
-//   return cartasArrayCopy;
-// };
-
-// crearCartas(cartasArray);
-// bubbleSort(cartasArray);
-// console.log(bubbleSort(cartasArray));
-// console.log(cartas);
-// console.log(cartasArray);
 
 mostrar.addEventListener("click", () => {
   let cantidadDeCartas = numeroDeCartas.value;
